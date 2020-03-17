@@ -1,0 +1,11 @@
+a = list('e2938a568v58')
+b = []
+print(a)
+for char in a:
+    if char.isalpha():
+        b.append(char)
+    elif char.isnumeric() and a[a.index(char)-1].isalpha():
+        b.append(char)
+    elif char.isnumeric() and a[a.index(char)-1].isnumeric():
+        b.append(b.pop() + char)
+print(b)
